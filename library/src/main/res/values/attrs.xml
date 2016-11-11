@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RippleLayout">
+        <attr name="ripple_center_x" format="dimension"/>
+        <attr name="ripple_center_y" format="dimension"/>
+        <attr name="ripple_anim_time" format="integer"/>
+        <attr name="ripple_start_value" format="float"/>
+        <attr name="ripple_end_value" format="float"/>
+        <attr name="ripple_center_align" format="enum">
+            <enum name="top_left" value="0"/>
+            <enum name="top_right" value="1"/>
+            <enum name="bottom_left" value="2"/>
+            <enum name="bottom_right" value="3"/>
+        </attr>
+    </declare-styleable>
+
+</resources>
