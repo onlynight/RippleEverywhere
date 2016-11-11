@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.github.onlynight.rippleeverywhere.MainActivity">
+    tools:context="com.github.onlynight.rippleverywhere.MainActivity">
 
-    <com.github.onlynight.rippleeverywhere.RippleImageView
-        android:id="@+id/imageRipple"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:scaleType="centerCrop"
-        android:src="@drawable/my_girlfriend"
-        android:textSize="40sp"/>
+    <com.github.onlynight.rippleeverywhere.library.RippleLayout
+        android:id="@+id/rippleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:ripple_anim_time="500"
+        app:ripple_center_align="bottom_left"
+        app:ripple_center_x="20dp"
+        app:ripple_center_y="20dp"
+        app:ripple_end_value="1"
+        app:ripple_start_value="0">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/my_girlfriend"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/my_girlfriend2"/>
+
+    </com.github.onlynight.rippleeverywhere.library.RippleLayout>
+
 </LinearLayout>
