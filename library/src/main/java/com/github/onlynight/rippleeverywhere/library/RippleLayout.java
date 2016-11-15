@@ -181,6 +181,11 @@ public class RippleLayout extends LinearLayout {
         return super.drawChild(canvas, child, drawingTime);
     }
 
+    /**
+     * get the radius change animator,
+     * so that you can listen the animator status.
+     * @return animator
+     */
     public ObjectAnimator getRadiusAnimator() {
         return radiusAnimator;
     }
