@@ -2,11 +2,31 @@
 <resources>
 
     <declare-styleable name="RippleLayout">
+
+        <!-- ripple animation center x,
+        the default value is the center of the view X-->
         <attr name="ripple_center_x" format="dimension"/>
+
+        <!-- ripple animation center y,
+        the default value is the center of the view Y-->
         <attr name="ripple_center_y" format="dimension"/>
+
+        <!-- ripple anim duration,
+        the default value is 300ms-->
         <attr name="ripple_anim_time" format="integer"/>
+
+        <!-- ripple start value,
+        from time=0 set the value to this value,
+        the default value is 0-->
         <attr name="ripple_start_value" format="float"/>
+
+        <!-- ripple end value,
+        to time=ripple_anim_time set the value to this value,
+        the default value is 1-->
         <attr name="ripple_end_value" format="float"/>
+
+        <!-- the ripple animation center point alignment,
+         the default value is top_left.-->
         <attr name="ripple_center_align" format="enum">
             <enum name="top_left" value="0"/>
             <enum name="top_right" value="1"/>
