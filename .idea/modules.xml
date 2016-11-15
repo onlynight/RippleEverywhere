@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RippleEveryWhere.iml" filepath="$PROJECT_DIR$/RippleEveryWhere.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/principle/principle.iml" filepath="$PROJECT_DIR$/principle/principle.iml" />
       <module fileurl="file://$PROJECT_DIR$/principle/principle.iml" filepath="$PROJECT_DIR$/principle/principle.iml" />
     </modules>
   </component>
