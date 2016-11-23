@@ -15,3 +15,6 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-dontwarn com.github.onlynight.rippleeverywhere.library.**
+-keep com.github.onlynight.rippleeverywhere.library.** {*;}

@@ -31,6 +31,13 @@ dependencies {
 }
 ```
 
+#proguard
+
+```java
+-dontwarn com.github.onlynight.rippleeverywhere.library.**
+-keep com.github.onlynight.rippleeverywhere.library.** {*;}
+```
+
 #Sample Code
 
 layout file:
