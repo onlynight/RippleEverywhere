@@ -87,7 +87,10 @@ public class RippleLayout extends LinearLayout {
                     R.styleable.RippleLayout_ripple_end_value, endValue);
             rippleCenterAlign = array.getInt(
                     R.styleable.RippleLayout_ripple_center_align,
-                    RIPPLE_CENTER_ALIGN_TOP_LEFT);
+                    -1);
+
+            centerX = (int) startX;
+            centerY = (int) startY;
         }
 
         radiusAnimator = ObjectAnimator.ofFloat(this, "animValue", startValue, endValue);
@@ -163,7 +166,6 @@ public class RippleLayout extends LinearLayout {
 
     public void setAnimValue(float radius) {
         this.radius = radius * maxRadius;
-        System.out.println("radius = " + this.radius);
         invalidate();
     }
 
@@ -184,6 +186,7 @@ public class RippleLayout extends LinearLayout {
     /**
      * get the radius change animator,
      * so that you can listen the animator status.
+     *
      * @return animator
      */
     public ObjectAnimator getRadiusAnimator() {
