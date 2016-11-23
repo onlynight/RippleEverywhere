@@ -85,9 +85,14 @@ public class RippleLayout extends LinearLayout {
                     R.styleable.RippleLayout_ripple_start_value, startValue);
             endValue = array.getFloat(
                     R.styleable.RippleLayout_ripple_end_value, endValue);
+
+            int defaultAlign = -1;
+            if (startX > 0 || startY > 0) {
+                defaultAlign = RIPPLE_CENTER_ALIGN_TOP_LEFT;
+            }
             rippleCenterAlign = array.getInt(
                     R.styleable.RippleLayout_ripple_center_align,
-                    -1);
+                    defaultAlign);
 
             centerX = (int) startX;
             centerY = (int) startY;

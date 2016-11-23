@@ -15,6 +15,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:ripple_anim_time="500"
+        app:ripple_center_align="bottom_left"
+        app:ripple_center_x="20dp"
+        app:ripple_center_y="20dp"
         app:ripple_end_value="1"
         app:ripple_start_value="0">
 
