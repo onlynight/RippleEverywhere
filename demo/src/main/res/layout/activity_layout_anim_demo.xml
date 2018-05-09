@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LayoutAnimDemoActivity">
+
+    <com.github.onlynight.rippleeverywhere.library.RippleLayout
+        android:id="@+id/ripple_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:auto_play="true"
+        app:ripple_anim_time="1000"
+        app:ripple_center_align="top_left"
+        app:ripple_center_x="10dp"
+        app:ripple_center_y="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_dark_soul_1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_dark_soul_2" />
+
+    </com.github.onlynight.rippleeverywhere.library.RippleLayout>
+
+</LinearLayout>

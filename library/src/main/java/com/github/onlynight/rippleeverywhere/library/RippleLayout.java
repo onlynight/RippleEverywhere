@@ -10,6 +10,7 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.LinearLayout;
 
@@ -32,6 +33,7 @@ public class RippleLayout extends LinearLayout {
     private float startValue = 0;
     private float endValue = 1;
     private int duration = 300;
+    private boolean autoPlay = false;
     private int rippleCenterAlign = RIPPLE_CENTER_ALIGN_TOP_LEFT;
     private int width = 0;
     private int height = 0;
@@ -40,7 +42,10 @@ public class RippleLayout extends LinearLayout {
     private float startY = 0;
 
     private ObjectAnimator radiusAnimator;
+    private Animator.AnimatorListener animatorListener;
     private Path ripplePath;
+
+    private boolean autoPlayFlag = false;
 
     public RippleLayout(Context context) {
         super(context);
@@ -81,6 +86,7 @@ public class RippleLayout extends LinearLayout {
                     R.styleable.RippleLayout_ripple_center_y, -1);
             duration = array.getInteger(
                     R.styleable.RippleLayout_ripple_anim_time, duration);
+            autoPlay = array.getBoolean(R.styleable.RippleLayout_auto_play, false);
             startValue = array.getFloat(
                     R.styleable.RippleLayout_ripple_start_value, startValue);
             endValue = array.getFloat(
@@ -105,23 +111,49 @@ public class RippleLayout extends LinearLayout {
             @Override
             public void onAnimationStart(Animator animator) {
                 running = true;
+                if (animatorListener != null) {
+                    animatorListener.onAnimationStart(animator);
+                }
             }
 
             @Override
             public void onAnimationEnd(Animator animator) {
                 running = false;
+                if (animatorListener != null) {
+                    animatorListener.onAnimationEnd(animator);
+                }
             }
 
             @Override
             public void onAnimationCancel(Animator animator) {
-
+                if (animatorListener != null) {
+                    animatorListener.onAnimationCancel(animator);
+                }
             }
 
             @Override
             public void onAnimationRepeat(Animator animator) {
-
+                if (animatorListener != null) {
+                    animatorListener.onAnimationRepeat(animator);
+                }
             }
         });
+
+        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                if (!autoPlayFlag) {
+                    autoPlayFlag = true;
+                    if (autoPlay) {
+                        radiusAnimator.start();
+                    }
+                }
+            }
+        });
+    }
+
+    public void setAnimatorListener(Animator.AnimatorListener animatorListener) {
+        this.animatorListener = animatorListener;
     }
 
     @Override
@@ -172,6 +204,10 @@ public class RippleLayout extends LinearLayout {
     public void setAnimValue(float radius) {
         this.radius = radius * maxRadius;
         invalidate();
+    }
+
+    public void setAutoPlay(boolean autoPlay) {
+        this.autoPlay = autoPlay;
     }
 
     @Override

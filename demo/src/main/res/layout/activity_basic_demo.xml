@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="false"
+    tools:context=".BasicDemoActivity">
+
+    <com.github.onlynight.rippleeverywhere.library.RippleLayout
+        android:id="@+id/ripple_layout"
+        android:layout_width="match_parent"
+        app:ripple_anim_time="500"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="click to show"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+    </com.github.onlynight.rippleeverywhere.library.RippleLayout>
+
+</LinearLayout>

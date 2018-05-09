@@ -3,7 +3,9 @@ Ripple Everywhere
 
 A ripple animation layout library.You can use it above android 4.0.
 
-#Preview
+# Preview
+
+![ripple_everywhere](./images/ripple_everywhere.gif)
 
 ![demo](https://github.com/onlynight/ReadmeDemo/blob/master/Readmes/ReciprocatingAnimation/images/ripple_demo.gif)
 
@@ -11,7 +13,7 @@ A ripple animation layout library.You can use it above android 4.0.
 
 (If you can't see the preview gif, you can download it, it's a large gif)
 
-#build.gradle
+# build.gradle
 In your project root path ```build.gradle``` file, add this:
 
 ```groovy
@@ -31,14 +33,14 @@ dependencies {
 }
 ```
 
-#proguard
+# proguard
 
 ```java
 -dontwarn com.github.onlynight.rippleeverywhere.library.**
 -keep com.github.onlynight.rippleeverywhere.library.** {*;}
 ```
 
-#Sample Code
+# Sample Code
 
 layout file:
 
@@ -86,7 +88,7 @@ rippleLayout.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-#XML property explain
+# XML property explain
 
 ```xml
 <declare-styleable name="RippleLayout">
@@ -124,7 +126,7 @@ rippleLayout.setOnClickListener(new View.OnClickListener() {
 </declare-styleable>
 ```
 
-#API explain
+# API explain
 
 ```java
 /**
@@ -135,11 +137,11 @@ rippleLayout.setOnClickListener(new View.OnClickListener() {
 RippleLayout#getRadiusAnimator()
 ```
 
-#THANKS
+# THANKS
 
 [CircularReveal]
 
-#License
+# License
 
 ```
 Copyright 2016 onlynight

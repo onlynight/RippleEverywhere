@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RippleEveryWhere.iml" filepath="$PROJECT_DIR$/RippleEveryWhere.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RippleEverywhere.iml" filepath="$PROJECT_DIR$/RippleEverywhere.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/principle/principle.iml" filepath="$PROJECT_DIR$/principle/principle.iml" />
     </modules>
   </component>
 </project>

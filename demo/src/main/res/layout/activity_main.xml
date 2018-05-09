@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -9,32 +7,24 @@
     android:orientation="vertical"
     tools:context="com.github.onlynight.rippleverywhere.MainActivity">
 
-    <com.github.onlynight.rippleeverywhere.library.RippleLayout
-        android:id="@+id/rippleLayout"
+    <include layout="@layout/part_toolbar" />
+
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:ripple_anim_time="500"
-        app:ripple_center_align="bottom_left"
-        app:ripple_center_x="20dp"
-        app:ripple_center_y="20dp"
-        app:ripple_end_value="1"
-        app:ripple_start_value="0">
+        android:layout_height="wrap_content"
+        android:onClick="onBasicDemoClick"
+        android:text="Basic Demo" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:scaleType="centerCrop"
-            android:src="@drawable/my_girlfriend"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onLayoutAnimDemoClick"
+        android:text="Layout Anim Demo" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:scaleType="centerCrop"
-            android:src="@drawable/my_girlfriend2"/>
-
-    </com.github.onlynight.rippleeverywhere.library.RippleLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onRecyclerViewDemoClick"
+        android:text="Recycler view Demo" />
 
 </LinearLayout>
