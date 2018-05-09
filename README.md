@@ -29,7 +29,7 @@ And in your module path ```build.gradle``` file, add this:
 
 ```groovy
 dependencies {
-    compile 'com.github.onlynight:RippleEverywhere:0.0.2'
+    compile 'com.github.onlynight:RippleEverywhere:0.1.0'
 }
 ```
 
